@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sass Nesting</title>
+    <link rel="stylesheet" href="sass/main.css">
+</head>
+<!--
+    Nesting: Nesting is a shortcut to create CSS rules for multiple selectors for a 
+    specific property. So, instead of rewriting the same set of properties for the different 
+    selectors, we can simply nest selectors inside other selectors
+     Example: 
+            nav {
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                }
+                li {
+                    display: inline-block;
+                }
+                a {
+                    display: block;
+                    padding: 6px 12px; 
+                    text-decoration: none;
+                }
+            }
+            Notice that in Sass, the ul, li, and a selectors are nested inside the nav selector.
+            but in main.css/css file they are defined like this:
+                                    nav ul {
+                                        margin: 0;
+                                        padding: 0;
+                                        list-style: none;
+                                    }
+                                    nav li {
+                                        display: inline-block;
+                                    }
+                                    nav a {
+                                        display: block;
+                                        padding: 6px 12px;
+                                        text-decoration: none;
+                                    }
+
+
+            learn more about nesting : https://www.w3schools.com/sass/sass_nesting.php
+-->
+<body>
+    <header class="main-header">
+        <h1>Welcome to Coding Bytes</h1>
+        <p>Please Like and </p>
+        <!-- here h1 and p tags are inside header so we can nest them inside header 
+            in main.scss file-->
+    </header>
+</body>
+</html>
+<!--
+    Extra: 
+    Sass Nested Properties
+     Many CSS properties have the same prefix, like font-family, font-size and font-weight or 
+     text-align, text-transform and text-overflow. With Sass you can write them as nested 
+     properties:
+
+            Example
+            SCSS Syntax:
+
+            font: {
+            family: Helvetica, sans-serif;
+            size: 18px;
+            weight: bold;
+            }
+
+            text: {
+            align: center;
+            transform: lowercase;
+            overflow: hidden;
+            }
+
+            The Sass transpiler will convert the above to normal CSS:
+
+            CSS Output:
+
+            font-family: Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+
+            text-align: center;
+            text-transform: lowercase;
+            text-overflow: hidden;
+
+-->

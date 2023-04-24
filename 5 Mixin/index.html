@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sass mixin</title>
+    <link rel="stylesheet" href="sass/main.css">
+</head>
+<!--
+    //mixin is important
+    mixin :The @mixin directive lets you create CSS code that is to be reused throughout the website. 
+         The @include directive is created to let you use (include) the mixin.
+        ->Here we are group those properties together which might be reused like this:
+                                            @mixin name {
+                                                    property: value;
+                                                    property: value;
+                                                    ...
+                                                    }
+                                            to use it like this
+                                            selector {
+                                                    @include mixin-name;
+                                                    }
+      ->  A mixin can also include other mixins:
+                @mixin special-text {
+                    @include important-text;
+                    @include link;
+                    @include special-border;
+                }
+                                    
+    ->
+
+            learn more about nesting : https://www.w3schools.com/sass/sass_mixin_include.php
+-->
+<body>
+    <header class="main-header">
+        <h1>Welcome to Coding Bytes</h1>
+        <p>Like and </p>
+    </header>
+</body>
+</html>

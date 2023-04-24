@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+//declaring variables
+$bg-color:#576574;
+$mytextcolor:#ff6b6b;
+$myfont:monospace;
+$border_color:white;
+
+.main-header{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    //background-color: #222f3e;//removing this color with variable
+    background-color: $bg-color; //but in main.css file it will show it as background-color: #576574;
+}
+h1{
+    //color: #ee5253;
+    color:$mytextcolor;
+    font-size: 2rem+1rem;
+    font-family: $myfont; //in main.css file it will show it as font-family: monospace;
+    $myborder:2px solid $border-color; //this can be used only inside h1 as it's local variable 
+    //to make it work outside as well use !global i.e  $myborder:2px solid $mytextcolor !global;
+    border-bottom: $myborder;
+}

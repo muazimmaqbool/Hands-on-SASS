@@ -1,0 +1,51 @@
+@import "mixin"; 
+@import "var";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main-header{
+    width: 100vw;
+    height: 100vh;
+    @include flexprop;
+    background-color: $bg-color;
+
+    h1{
+        @include colorFont(.8rem,capitalize);
+        font-family: $myfont; 
+        $myborder:3px dashed $mytextcolor; //we cam also use this different folder
+        border-bottom: $myborder; 
+        margin-bottom: 10px;
+        &:hover{ 
+            color: #0abde3;
+        }
+        &::before{
+            content: 'Hi; ';
+        } 
+    }
+    p{
+        @include colorFont(.3rem,uppercase);
+        font-weight: bold;
+        &:hover{
+            color: #0abde3;
+            &::after{ 
+                content: "Subscribe";
+              }
+        }   
+    } 
+    #btndiv{
+        @include btnmixin;
+    }
+    .like  {
+        font-size: 2rem;
+        border: 2px solid $mytextcolor;
+        border-radius: 8px;
+        background: transparent;
+        color: $mytextcolor;
+    } 
+    .sub{
+        @extend .like;
+        margin-left:5rem;
+    }
+}

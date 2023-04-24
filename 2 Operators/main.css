@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main_header {
+  width: 100vw;
+  height: 100vh;
+  /*Now it will take complete width and height of any device*/
+  display: grid;
+  place-items: center;
+  background-color: #54a0ff;
+  /*pick colors from : https://flatuicolors.com/palette/ca */
+}
+
+h1 {
+  color: #222f3e;
+  font-size: 4rem;
+}/*# sourceMappingURL=main.css.map */

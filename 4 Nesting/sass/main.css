@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-header {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #576574;
+}
+.main-header h1 {
+  color: #ff6b6b;
+  font-size: 3rem;
+  font-family: monospace;
+  border-bottom: 2px solid #ff6b6b;
+  margin-bottom: 10px;
+}
+.main-header h1:hover {
+  color: #0abde3;
+}
+.main-header h1::before {
+  content: "Hi; ";
+}
+.main-header p {
+  color: #ff6b6b;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.main-header p:hover {
+  color: #0abde3;
+}
+.main-header p:hover::after {
+  content: "Subscribe";
+}/*# sourceMappingURL=main.css.map */

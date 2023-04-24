@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-header {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #222f3e;
+}
+.main-header h1 {
+  color: #f368e0;
+  font-size: 3rem;
+  text-transform: capitalize;
+  letter-spacing: 0.8rem;
+  font-family: monospace;
+  border-bottom: 3px dashed #f368e0;
+  margin-bottom: 10px;
+}
+.main-header h1:hover {
+  color: #0abde3;
+}
+.main-header h1::before {
+  content: "Hi; ";
+}
+.main-header p {
+  color: #f368e0;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: bold;
+}
+.main-header p:hover {
+  color: #0abde3;
+}
+.main-header p:hover::after {
+  content: "Subscribe";
+}
+.main-header #btndiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-header .like, .main-header .sub {
+  font-size: 2rem;
+  border: 2px solid #f368e0;
+  border-radius: 8px;
+  background: transparent;
+  color: #f368e0;
+}
+.main-header .sub {
+  margin-left: 5rem;
+}/*# sourceMappingURL=main.css.map */

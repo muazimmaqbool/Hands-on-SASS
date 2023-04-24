@@ -1,0 +1,17 @@
+@mixin flexprop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin colorFont($par1,$par2){
+    color: $mytextcolor;
+    font-size:2rem+1rem;
+    text-transform: $par2;
+    letter-spacing: $par1;
+}
+@mixin btnmixin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

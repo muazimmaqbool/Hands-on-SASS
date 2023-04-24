@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mixin 2</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<!--
+    //before going through this code please take a look at previous code first
+      // ->Passing Variables to a Mixin:
+            Mixins accept arguments. This way you can pass variables to a mixin.
+            Here is how to define a mixin with arguments:
+                /* Define mixin with two arguments */
+                @mixin bordered($color, $width) {
+                    border: $width solid $color;
+                }
+                .myArticle {
+                    @include bordered(blue, 1px);  // Call mixin with two values
+                    //the it will be : 1px solid blue border
+                }
+                .myNotes {
+                    @include bordered(red, 2px); // Call mixin with two values
+                }
+    
+    // -> Default Values for a Mixin
+                It is also possible to define default values for mixin variables:
+                    @mixin bordered($color: blue, $width: 1px) {
+                        border: $width solid $color;
+                    }
+                Then, you only need to specify the values that change when you include the mixin:
+                        .myTips {
+                            @include bordered($color: orange);
+                        }
+
+    
+
+            learn more about nesting : https://www.w3schools.com/sass/sass_mixin_include.php
+-->
+<body>
+    <header class="main-header">
+        <h1>Welcome to Coding Bytes</h1>
+        <p>Like and </p>
+    </header>
+</body>
+</html>

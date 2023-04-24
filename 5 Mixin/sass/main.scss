@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+$bg-color:#576574;
+$mytextcolor:#ff9f43;
+$myfont:monospace;
+
+@mixin flexprop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+//now we have to use only flexprop instead of the above 4 lines of code
+
+@mixin colorFont{
+    color: $mytextcolor;
+    font-size:2rem+1rem;
+    text-transform: capitalize;
+}
+
+.main-header{
+    width: 100vw;
+    height: 100vh;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;*///we are mixin these display flex properties together above
+    @include flexprop;
+    background-color: $bg-color;
+
+    h1{
+        /*color:$mytextcolor;
+        font-size: 2rem+1rem; */
+        //these two color and font-size are same in h1 tag and p tag so we are using mixin on these two
+        @include colorFont;
+        letter-spacing: .5rem;
+        font-family: $myfont; 
+        $myborder:2px solid $mytextcolor;
+        border-bottom: $myborder;
+        margin-bottom: 10px;
+        &:hover{ 
+            color: #0abde3;
+        }
+        &::before{
+            content: 'Hi; ';
+        } 
+    }
+    p{
+        /*color: $mytextcolor;
+        font-size:2rem+1rem ;*/
+        @include colorFont;
+        font-weight: bold;
+        &:hover{
+            color: #0abde3;
+            &::after{ 
+                content: "Subscribe";
+              }
+        }   
+    }  
+}
+
+

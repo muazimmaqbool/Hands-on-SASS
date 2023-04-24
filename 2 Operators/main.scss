@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main_header{
+    width: 100vw;
+    height: 100vh;
+    /*Now it will take complete width and height of any device*/
+    display:grid;
+    place-items: center;
+    background-color: #54a0ff;
+    /*pick colors from : https://flatuicolors.com/palette/ca */
+}
+h1{
+    color: #222f3e;
+    font-size: 2rem+2rem; // it will show in main file as font-size:4rem
+                        // can also wirte 10rem - 8 rem can also use *,/.% etc
+}

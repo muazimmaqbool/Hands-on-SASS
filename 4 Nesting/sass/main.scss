@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+$bg-color:#576574;
+$mytextcolor:#ff6b6b;
+$myfont:monospace;
+.main-header{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $bg-color;
+
+    h1{
+        color:$mytextcolor;
+        font-size: 2rem+1rem;
+        font-family: $myfont; 
+        $myborder:2px solid $mytextcolor;
+        border-bottom: $myborder;
+        margin-bottom: 10px;
+        &:hover{ 
+//can write h1:hover like this &:hover and in main.css file it will be shown as .main-header h1:hover
+     //&:hover is same as .main-header h1:hover{....}    
+     //&:hover : means that iske upper jo iska parent element hain ausko fetch kare ga so it will fetch h1/ inherit    
+            color: #0abde3;
+        }
+        &::before{
+            content: 'Hi; ';
+        }
+        
+    }
+    // h1:hover{ // we can write this inside h1 because we are working with h1 so let's 
+                              //move it inside h1 same goes with p tag
+    //     color: #0abde3;
+    // }
+    p{
+        color: $mytextcolor;
+        font-weight: bold;
+        font-size:2rem ;
+        &:hover{
+            color: #0abde3;
+             //can also write
+            &::after{ //this will be showing on hover but if write this outside &:hover ,
+                        //inside p it will be shown even without hover
+                content: "Subscribe";
+              }
+        }
+        
+    }
+    
+}
+
+
